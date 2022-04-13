@@ -41,7 +41,7 @@ var allBills = 0;
 
 export function calculateMonthlyBills(bills) {
     for (const [_, value] of Object.entries(bills)) {
-        allBills += value;
+        allBills = value;
     }
 }
 
