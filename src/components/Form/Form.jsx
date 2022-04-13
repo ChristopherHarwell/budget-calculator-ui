@@ -63,7 +63,6 @@ const Form = () => {
             .post("https://intense-beach-32253.herokuapp.com/https://budget-calculator-api-v1.herokuapp.com/budget/v1", formState)
             .then((res) => {
                 setBudget([res.data, ...budget]);
-                console.log([res.data]);
                 // clear state after submitting
                 setFormState({
                     gross: 0,
