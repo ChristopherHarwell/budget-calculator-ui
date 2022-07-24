@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
 import * as yup from "yup";
-import axios from "axios";
+
+import React, { useEffect, useState } from "react";
+
+import Bills from "../Bills/Bills";
+import Expenses from "../Expenses/Expenses";
 import Gross from "../Gross/Gross";
 import Net from "../Net/Net";
 import Submit from "../SubmitButton/Submit";
-import Expenses from "../Expenses/Expenses";
-import Bills from "../Bills/Bills";
+import axios from "axios";
+
 const Form = () => {
     // Form State
     const [formState, setFormState] = useState({
@@ -60,7 +63,7 @@ const Form = () => {
     const sumbitForm = (event) => {
         event.preventDefault();
         axios
-            .post("https://intense-beach-32253.herokuapp.com/https://budget-calculator-api-v1.herokuapp.com/budget/v1", formState)
+            .post("https://dashboard.heroku.com/apps/budget-calculator-api-v1", formState)
             .then((res) => {
                 setBudget([res.data, ...budget]);
                 // clear state after submitting
