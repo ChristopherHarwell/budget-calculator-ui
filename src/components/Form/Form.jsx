@@ -63,7 +63,7 @@ const Form = () => {
     const sumbitForm = (event) => {
         event.preventDefault();
         axios
-            .post("https://intense-beach-32253.herokuapp.com/https://budget-calculator-api-v1.herokuapp.com/", formState)
+            .get("https://cors-reverse-proxy-32253.herokuapp.com/https://budget-calculator-api-v1.herokuapp.com/daily-budget", formState)
             .then((res) => {
                 setBudget([res.data, ...budget]);
                 // clear state after submitting
