@@ -55,7 +55,7 @@ const Form = () => {
             ...formState,
             [event.target.name]:event.target.value,
         };
-        validateChange(event);
+        // validateChange(event);
         setFormState(newFormData);
     };
 
@@ -114,7 +114,7 @@ const Form = () => {
     return (
         <React.Fragment>
             <form onSubmit={sumbitForm}>
-                <Gross value={formState.gross} input={inputChanged} />
+                {/* <Gross value={formState.gross} input={inputChanged} />
                 {errors.gross.length > 0 ? (
                     <p className="error">{errors.gross}</p>
                 ) : null}
@@ -127,14 +127,14 @@ const Form = () => {
                 <Expenses value={formState.dailyExpenses} input={inputChanged} />
                 {errors.dailyExpenses.length > 0 ? (
                     <p className="error">{errors.dailyExpenses}</p>
-                ) : null}
+                ) : null} */}
 
                 {userArray.map((bill) => (<pre>{JSON.stringify(bill, null, 2)}</pre>))}
 
                 <Submit
                     value={formState.submit}
                     input={inputChanged}
-                    disabled={buttonDisabled}
+                    // disabled={buttonDisabled}
                 />
             </form>
         </React.Fragment>
