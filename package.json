@@ -13,7 +13,7 @@
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "local-cors-proxy": "^1.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
