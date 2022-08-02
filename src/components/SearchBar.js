@@ -14,7 +14,7 @@ function SearchBar(props) {
   };
 
   const fetchResults = async (query) => {
-    fetch(`localhost:8080/daily-budget`)
+    fetch(`https://cors-reverse-proxy-32253.herokuapp.com/https://budget-calculator-api-v1.herokuapp.com/daily-budget`)
       .then((response) => response.json())
       .then((data) => dispatch(saveResults(data)))
       .then((data)=>console.log(data));

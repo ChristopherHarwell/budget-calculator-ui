@@ -38,7 +38,7 @@ export default function Home() {
   useEffect(() => {
     const getdailyData = async () => {
       axios
-        .get("http://localhost:8080/daily-budget")
+        .get("https://cors-reverse-proxy-32253.herokuapp.com/https://budget-calculator-api-v1.herokuapp.com/daily-budget")
 
         .then((response) => {
           console.log("Date created: ", response.data);
@@ -47,7 +47,7 @@ export default function Home() {
     };
     const getweeklyData = async () => {
       axios
-        .get("http://localhost:8080/weekly-budget")
+        .get("https://cors-reverse-proxy-32253.herokuapp.com/https://budget-calculator-api-v1.herokuapp.com/weekly-budget")
 
         .then((response) => {
           console.log("Date created: ", response.data);
@@ -57,7 +57,7 @@ export default function Home() {
 
     const getmonthlyData = async () => {
       axios
-        .get("http://localhost:8080/monthly-budget")
+        .get("https://cors-reverse-proxy-32253.herokuapp.com/https://budget-calculator-api-v1.herokuapp.com/monthly-budget")
 
         .then((response) => {
           console.log("Date created: ", response.data);
